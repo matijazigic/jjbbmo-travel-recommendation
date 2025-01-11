@@ -45,10 +45,11 @@ function generateCards(data, type) {
         return;
     }
 
-    data[type].forEach(item => {
-        console.log('item: ', item)
+    console.log(data[type]);
 
-        if(type = 'countries') {
+    data[type].forEach(item => {
+        console.log(item)
+        if(type == 'countries') {
             imageUrl = item.cities[0].imageUrl;
             imageAlt = item.cities[0].name;
             textCont = item.cities[0].name;
@@ -58,8 +59,6 @@ function generateCards(data, type) {
             imageAlt = item.name;
             textCont = item.name;
             textDesc = item.description;
-
-            console.log(item.cities[0].name)
         }
         
         const card = document.createElement('div');
@@ -96,6 +95,10 @@ function showCardsSection() {
 // Search Recommendations
 async function searchRecommendations(type) {
     const data = await fetchTravelData();
+
+    if(type == 'country') {
+        type = 'countries';
+    }
 
     if (data && data[type]) {
         generateCards(data, type);
