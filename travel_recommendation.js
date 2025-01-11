@@ -6,6 +6,7 @@ document.addEventListener('navbarLoaded', function () {
 
     // Show or hide the clear button based on input value
     searchInput.addEventListener('input', () => {
+        console.log("Input...");
         clearButton.style.display = searchInput.value ? 'block' : 'none';
         searchRecommendations(searchInput.value)
     });
