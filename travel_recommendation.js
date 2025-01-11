@@ -12,6 +12,7 @@ document.addEventListener('navbarLoaded', function () {
 
     // Clear the input field when the clear button is clicked
     clearButton.addEventListener('click', () => {
+        console.log("Clear");
         searchInput.value = '';
         clearButton.style.display = 'none';
 
@@ -94,6 +95,8 @@ function showCardsSection() {
 
 // Search Recommendations
 async function searchRecommendations(type) {
+    console.log(type);
+
     const data = await fetchTravelData();
 
     if(type == 'country') {
