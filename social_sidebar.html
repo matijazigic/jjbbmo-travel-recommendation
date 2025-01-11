@@ -1,0 +1,35 @@
+<div class="social-sidebar">
+    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+  
+  <style>
+    .social-sidebar {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+    .social-sidebar a {
+      text-decoration: none;
+      color: #333; /* Default icon color */
+      font-size: 24px; /* Icon size */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #f0f0f0; /* Icon background color */
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .social-sidebar a:hover {
+      background-color: #0077b5; /* Change on hover */
+      color: white;
+    }
+  </style>
